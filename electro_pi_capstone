@@ -98,5 +98,5 @@ def main():
 
         else:
             print("This a TIE, Nobody won. play again.")
-        print("you can start again.^_^")
+        print("you can start playing again.^_^")
 main()
