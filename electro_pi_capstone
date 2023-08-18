@@ -69,34 +69,37 @@ def win_check(sympol):
         return False
 
 def main():
-        print("welcome to tic tac toe game. !!")
-        players_info()
-        print(f"Thank you for joining {player1_info[0]} and {player2_info[0]}")
-        print(instructions)
-        input("enter any key to start the game: ")
-        display(game_board)
-        for i in range(9):
-            if i % 2 == 0:
-                print(f"player1: {player1_info[0]} turn")
-                x = player_input()
-                game_board[x] = player1_info[1]
-                display(game_board)
-                if win_check(player1_info[1]) == True:
-                    print(f"congratulations {player1_info[0]}.!!! You WON.!\nThank you both for joining")
-                    break
+        while True:
+            print("welcome to tic tac toe game. !!")
+            players_info()
+            print(f"Thank you for joining {player1_info[0]} and {player2_info[0]}")
+            print(instructions)
+            input("enter any key to start the game: ")
+            display(game_board)
+            for i in range(9):
+                    if i % 2 == 0:
+                       print(f"player1: {player1_info[0]} turn")
+                       x = player_input()
+                       game_board[x] = player1_info[1]
+                       display(game_board)
+                       if win_check(player1_info[1]) == True:
+                            print(f"congratulations {player1_info[0]}.!!! You WON.!\nThank you both for joining")
+                            break
 
+
+                    else:
+                        print(f"player2: {player2_info[0]} turn")
+                        x = player_input()
+                        game_board[x] = player2_info[1]
+                        display(game_board)
+                        if win_check(player2_info[1]) == True:
+                            print(f"congratulations {player2_info[0]}.!!! You WON.!\nThank you both for joining")
+                            break
 
             else:
-                print(f"player2: {player2_info[0]} turn")
-                x = player_input()
-                game_board[x] = player2_info[1]
-
-                display(game_board)
-                if win_check(player2_info[1]) == True:
-                    print(f"congratulations {player2_info[0]}.!!! You WON.!\nThank you both for joining")
-                    break
-
-        else:
-            print("This a TIE, Nobody won. play again.")
-        print("you can start playing again.^_^")
+                print("This a TIE, Nobody won. play again.")
+            
+            play_again = input("Do you want to play again? (yes/no): ")
+            if play_again.lower() != "yes":
+                break    
 main()
