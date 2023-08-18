@@ -82,7 +82,7 @@ def main():
                 game_board[x] = player1_info[1]
                 display(game_board)
                 if win_check(player1_info[1]) == True:
-                    print(f"congratulations {player2_info[0]}.!!! You WON.!\nThank you both for joining")
+                    print(f"congratulations {player1_info[0]}.!!! You WON.!\nThank you both for joining")
                     break
 
 
